@@ -1,0 +1,101 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  color: #333;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #ff9a9e 0%, #fbeed6 60%, #a18cd1 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+.question-form,
+.result-board,
+.question-item {
+  background: rgba(255, 255, 255, 0.93);
+  box-shadow: 0 8px 26px -8px rgba(120, 72, 138, 0.3), 0 1.5px 5px rgba(40,100,200,0.09);
+  border-radius: 1rem;
+  margin: 1rem 0;
+  padding: 1.2rem 1rem;
+  transition: box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;     
+  align-items: flex-start;    
+  text-align: left;           
+  width: 100%;
+  max-width: 600px;           
+}
+.question-form:hover,
+.result-board:hover,
+.question-item:hover {
+  box-shadow: 0 12px 30px -6px rgba(120,72,138,0.35), 0 2px 8px rgba(40,100,200,0.12);
+}
+.result-board {
+  align-items: center;    
+  text-align: center;     
+}
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #8739fa;
+  background: rgba(255,255,255,0.7);
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px -6px #a18cd1;
+  padding: 1.5rem 0 1rem 0;
+  width: 100%;
+  max-width: 600px;
+}
+input[type="text"] {
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  font-size: 1.09rem;
+  margin-right: 1.2rem;
+  background: #f3f2fd;
+  box-shadow: 0 3px 6px rgba(120,72,138,0.07);
+  transition: border 0.2s, background 0.25s;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+input.input-correct {
+  border: 2px solid #47e067;
+  background: #e9f9ee;
+}
+input.input-wrong {
+  border: 2px solid #e04747;
+  background: #fdeaea;
+}
+button {
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 6px;
+  background: #8739fa;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(120,72,138,0.10);
+  transition: background 0.22s;
+}
+button:disabled {
+  background: #bbb;
+  color: #eee;
+  cursor: not-allowed;
+}
+.feedback-icon {
+  margin-left: 1.2rem;
+  font-size: 1.5rem;
+}
+.result-board {
+  font-size: 1.13rem;
+}
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+  .question-form {
+    flex-direction: column;
+    padding: 1rem 0.3rem;
+    align-items: stretch;
+  }
+}
